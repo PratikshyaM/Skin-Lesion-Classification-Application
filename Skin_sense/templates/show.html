@@ -1,0 +1,21 @@
+<html>
+
+  <head>
+    <title>Skin Lesion Type Detection</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Predicted Class: {{ result.highest_class_name }}</h1>
+    <hr>
+    <div><img src="{{ result.path_to_image }}" class="img-rounded" width="auto" height="auto"></div>
+    <h3>1st Highest Predicted Class: {{ result.highest_class_name }}
+        ({{ result.highest_prob }}%)</h3>
+    <h3>2nd Highest Predicted Class: {{ result.second_highest_class_name }}
+        ({{ result.second_highest_prob }}%)</h3>
+    <h3>3rd Highest Predicted Class: {{ result.third_highest_class_name }}
+        ({{ result.third_highest_prob }}%)</h3>
+    <hr>
+    <a href = "{{ url_for('index') }}" class="btn btn-default">Go Back</a>
+</div>
+  </body>
+</html>
